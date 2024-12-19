@@ -1,0 +1,18 @@
+engineer_name = input("Please write your name: ") 
+engineer_age = int(input("Enter your age: "))
+
+a = f'You are too young, Keep Going {engineer_name}'
+lenght = len(a) + 6
+
+b = "*" * lenght
+c = f'*{" " * (lenght - 2)}*'
+d = f'*  {a}  *'
+
+if engineer_age > 18 :
+    print(f'Well Done! I think you are experienced {engineer_name} !')
+else:
+    print(b)
+    print(c)
+    print(d)
+    print(c)
+    print(b)
