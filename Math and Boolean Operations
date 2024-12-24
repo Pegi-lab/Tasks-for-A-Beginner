@@ -1,0 +1,43 @@
+#Working_with_personal_data
+first = 'Pegah'
+last = 'Sadeghi'
+age  = '23'
+print('')
+print(first + ' ' + last ,'is', age ,'years old',)
+print(type(age))
+print(first.upper())
+print(first.lower())
+print(first.startswith('s'))
+print(first.endswith('j'))
+print('you are an adult!') if age > '18' else print('you are still teenager!')
+Birth = input('what is your year of birth?')
+current_year = 2024
+print(current_year - int(Birth))
+
+#Boolean
+GPA = 16.93
+print('real GPA:', abs(GPA))
+print('around GPA:', round(GPA))
+print(isinstance(GPA, float))
+import math
+print('square root of 81 is', math.sqrt(81))
+print('PI is', math.pi)
+print(math.ceil(GPA))
+print(math.floor(GPA))
+
+#Numbers_and_Strings
+complx = 2 + 3j
+print(type(complx))
+print(complx.real)
+print(complx.imag)
+
+multiline = '''
+ok   
+this is     
+                 the end of coding!
+'''
+print(multiline)   
+print(multiline.title()) 
+print(multiline.replace('ok' , 'hello')) 
+
+
