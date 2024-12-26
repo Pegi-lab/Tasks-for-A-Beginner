@@ -1,0 +1,16 @@
+import sys
+print(' ')
+playerchoice = input('please choose a number between 1 and 10 : ')
+player = int(playerchoice)
+if player > 10 or player < 1 :
+    sys.exit('Oh no! you chose a wrong number.')
+import random
+robotchoice = random.randint(1,10)
+robot = int(robotchoice)
+print('')
+if player == robot :
+    print('You are Lucky! you won 🎉')
+elif player >> robot :
+    print('Nice try, but it was too low, the robot chose' + ' ' + str(robotchoice))
+elif player << robot :
+    print('Nice try, but it was too high, the robot chose' + ' ' + str(robotchoice))
