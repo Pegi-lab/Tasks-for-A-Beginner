@@ -1,0 +1,52 @@
+
+##university_departments
+University = {
+    'name' : 'Premedical University of Kashan',
+    'year_founded' : 1368,
+    'location' : 'Kashan, Ravandi',
+    'departments' : {
+        'Immunology' : {
+            'Department Head' : 'Dr.Ghotlou',
+            'Courses' : {
+                'Immunology - Theory and Lab' : {
+                    'Professor' : 'Dr.Ghotlou',
+                    'Credits' : 2,
+                    'Schedule' : 'Wednesdays 8-12AM'
+                },
+                'Cellular Techniques - Lab' : {
+                    'Professor' : 'Dr.Ghotlou',
+                    'Credits' : 2,
+                    'Schedule' : 'Sundays 10-12AM'
+                },
+                'Cellular Techniques - Theory' : {
+                    'Professor' : 'Dr.Ghotlou',
+                    'Credits' : 2,
+                    'Schedule' : 'Sundays 8-10AM'
+                },
+            },
+        },
+        'Hematology' : {
+             'Department Head' : 'Dr.Salimian',
+             'Courses' : {
+                 'Immuno_Hematology' : {
+                    'Professor' : ('Dr.Ghotaslou' , 'Dr.Salimian'),
+                    'Credits' : 2,
+                    'Schedule' : 'Tuesdays 8-12AM'
+                },
+                 'Hematology_lab' : {
+                     'Professor' : 'Dr.Salehi',
+                     'Credits' : 2,
+                     'Schedule' : 'Saturdays 2-4PM'
+                 },
+                  'Hematology_Diseases' : {
+                       'Professor' : 'Dr.Ghotaslou',
+                       'Credits' : 3,
+                       'Schedule' : 'Saturdays and Mondays 10-12AM'
+                  },
+             },   
+        },
+        
+    },
+                                 }
+
+print(f'Who teaches Immuno_hematology? {University['departments']['Hematology']['Courses']['Immuno_Hematology']['Professor']}')
