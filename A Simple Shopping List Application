@@ -1,0 +1,35 @@
+shopping_list = []
+def add_item(item):
+    shopping_list.append(item)
+    print(item , 'is added')
+def view_list():
+    if not shopping_list:
+        print('SORRY! the shopping list is empty')
+    else:
+        print(shopping_list)
+def remove_item(item):
+    shopping_list.remove(item)
+    print(item, 'is removed successfuly')
+def main():
+    while True:
+        print('\n--- Simple Shopping List ---')
+        print('1. Adding an Item')
+        print('2. View List')
+        print('3. Removing an Item')
+        print('4. Exit')
+        choice = input('\nPlease enter the number of your option: ')
+        if choice == '1':
+            item = input('\nEnter your item to add: ')
+            add_item(item)
+        elif choice == '2':
+            print('\n this is your list: ')
+            view_list()
+        elif choice == '3':
+            item = input('\nEnter the itam you want to delete please: ')
+            remove_item(item)
+        elif choice == '4':
+            print('\nExiting\n')
+            break
+        else:
+            print('\nInvalid Number\n')
+main()
