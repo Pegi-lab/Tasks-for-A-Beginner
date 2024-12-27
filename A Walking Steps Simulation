@@ -1,0 +1,29 @@
+#Walking Steps Simulation
+goal = input('Enter your daily walking steps goal please:')
+def walk(steps):
+    steps = input('Enter steps you have walked till now.')
+    left_steps = int(goal) - int(steps)
+    if left_steps > 0 :
+        print('taking a step...\n', left_steps ,'steps left...')
+        return walk(left_steps) 
+    elif left_steps <= 0:
+        print('Congrats! you have reached your destination.')    
+walk(steps = 0)
+
+#Sum of Nembers Up to n
+def sum_up_to(n):
+    if n == 0:
+        return 0
+    return n + sum_up_to(n - 1)
+print()
+print(sum_up_to(5))
+
+#countdown timer
+def countdown(n):
+    print(f'{n} seconds left')
+    if n <= 0:
+        print('time is up!')
+        return
+    return countdown(n - 1)
+print()
+countdown(5)
