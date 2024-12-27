@@ -1,0 +1,68 @@
+value = 1
+while value <= 10:
+    print(value)
+    if value == 5:
+        break
+    value += 1
+print('the last number python writes is 5?', value == 5)
+for value in range(1, 20):
+    print(value)
+    if value == 5:
+        break
+
+value = 1
+while value <= 10:
+    value += 1
+    if value == 5 :
+        continue
+    print('new ones: ', value)
+else:
+    print('value is now equal to', value)
+
+skip_num = int(input('Enter a num you want to skip: '))
+value = 1
+while value <= 10:
+    value +=1
+    if value == skip_num:
+        continue
+    print('the new user set is: ', value)
+else:
+    print('value is now equal to: ', value)
+
+names = ['dave','sara', 'john']
+for n in names:
+    print(n)
+for n in names:
+    if n == 'sara':
+        break
+    print('the names before sara are:', n)
+for n in names:
+    if n == 'sara':
+        continue
+    print('the names which skips from sara are:', n)
+
+for x in 'mississippi':
+    print(x)
+
+choice = input('Enter a name:')
+for x in choice:
+    print(x)
+
+for x in range(5, 101, 5):
+    print(x)
+else:
+    print('is over!')
+
+start = int(input('Enter the starting number '))
+end = int(input('Enter the endingstarting number '))
+bonus = int(input('How you want bonus? '))
+for a in range(start, end+1, bonus):
+    print(a)
+else:
+    print('thats over')
+
+names = input('enter names: ').split(',')
+actions = input('enter actions: ').split(',')
+for name in names:
+    for action in actions:
+        print(f'{name.strip()} is doing {action.strip()}')
