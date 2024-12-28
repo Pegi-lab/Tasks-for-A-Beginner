@@ -34,3 +34,35 @@ def filter_inventory(min_quantity, min_price):
     for item, details in inventory.items():
         if details[0] >= min_quantity and details[1] >= min_price:
             print('item: ' ,item, 'Quantity: ') ,str(details[0]), 'Price:$' , str(details[1])
+
+
+def menu():
+    print('\nInventory Management System')
+    print('1. Adding an item.')
+    print('2. View inventory.')
+    print('3. updating an item.')
+    print('4. deleting an item.')
+    print('5. Filter inventory.')
+    print('6. Exit.')
+
+    choice = input('Choose a number').strip()
+    print(f"debug: Choice entered is'{choice}'")
+    if choice == '1':
+        add_item()
+    elif choice == '2':
+        view_inventory()
+    elif choice == '3':
+        update_item()
+    elif choice == '4':
+        delete_item()
+    elif choice == '5':
+        min_quantity = int(input('Enter minimum quantity: '))
+        min_price = float(input('Enter minimum price: '))
+        filter_inventory(min_quantity, min_price)
+    elif choice == '6':
+        print('exiting')
+    else:
+        print('it is not a correct number.')
+        menu()
+    menu()
+menu()
