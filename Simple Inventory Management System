@@ -1,0 +1,36 @@
+inventory = {}
+def add_item():
+    item_name = input('Enter item name: ')
+    quantity = int(input('Enter quantity: '))
+    price = float(input('Enter price: '))
+    inventory[item_name] = (quantity, price)
+    print(item_name, 'has been added to inventory.')
+
+def view_inventory():
+    if not inventory:
+        print('The inventory is empty.')
+    else:
+        print('The inventory is: ')
+        for item, details in inventory.items():
+            print('item: ' , item, 'quantity: ') , str(details[0]), 'price:$', str(details[1])
+def update_item():
+    item_name = input('Enter the name of the item to update: ')
+    if item_name in inventory:
+        quantity = int(input('Enter new quantity: '))
+        price = float(input('Enter new price: '))
+        inventory[item_name] = (quantity, price)
+        print(item_name, 'has been updated.')
+    else:
+        print('item not found.')
+def delete_item():
+    item_name = input('Enter the name of the item to remove: ')
+    if item_name in inventory:
+        del inventory[item_name]
+        print(item_name, 'has been deleted.')
+    else:
+        print('item not founded.')
+def filter_inventory(min_quantity, min_price):
+    print('filtered inventory is: ')
+    for item, details in inventory.items():
+        if details[0] >= min_quantity and details[1] >= min_price:
+            print('item: ' ,item, 'Quantity: ') ,str(details[0]), 'Price:$' , str(details[1])
